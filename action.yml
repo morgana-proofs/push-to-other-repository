@@ -35,8 +35,8 @@ inputs:
   target-branch:
     description: >-
       [Optional] set target branch name for the destination repository. Defaults
-      to "main"
-    default: main
+      to "master"
+    default: master
     required: false
   commit-message:
     description: >-
