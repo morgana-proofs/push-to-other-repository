@@ -1,4 +1,4 @@
-# github-action-push-to-another-repository
+# push-to-other-repository
 
 When to use this GitHub Action? It is useful in case that you have a GitHub repository with a a directory that you want to push to another GitHub repository using GitHub Actions (automated on push, for example). It is also useful if using GitHub Actions you generate certain files that you want to push to another GitHub repository.
 
@@ -32,7 +32,7 @@ The name that will be used for the commit in the destination-repository-name. If
 The Username/Organization for the destination repository, if different from `destination-github-username`. For the repository `https://github.com/cpina/push-to-another-repository-output` is `cpina`.
 
 ### `target-branch` (argument) [optional]
-The branch name for the destination repository. It defaults to `main`.
+The branch name for the destination repository. It defaults to `master`.
 
 ### `commit-message` (argument) [optional]
 The commit message to be used in the output repository. Optional and defaults to "Update from $REPOSITORY_URL@commit".
@@ -60,15 +60,15 @@ Then make the token available to the Github Action following the steps:
 ## Example usage
 ```yaml
       - name: Pushes to another repository
-        uses: cpina/github-action-push-to-another-repository@main
+        uses: LibreScore/push-to-other-repository@master
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source-directory: 'output'
-          destination-github-username: 'cpina'
-          destination-repository-name: 'pandoc-test-output'
-          user-email: carles3@pina.cat
-          target-branch: main
+          source-directory: 'sourceDir'
+          destination-github-username: 'foo'
+          destination-repository-name: 'bar'
+          user-email: foo@bar.com
+          target-branch: master
 ```
 
 Working example:
