@@ -1,3 +1,6 @@
+# Honorable Mentions:
+this is a fork of https://github.com/LibreScore/push-to-other-repository
+
 # push-to-other-repository
 
 When to use this GitHub Action? It is useful in case that you have a GitHub repository with a a directory that you want to push to another GitHub repository using GitHub Actions (automated on push, for example). It is also useful if using GitHub Actions you generate certain files that you want to push to another GitHub repository.
